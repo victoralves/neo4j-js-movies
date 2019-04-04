@@ -1,0 +1,43 @@
+<h3>Adicionar Ator</h3>
+<form method="POST" action="/person/add">
+    <input type="text" name="name" placeholder="Nome do ator">
+    <input type="submit" value="Enviar">
+</form>
+
+<h3>Adicionar Filme</h3>
+<form method="POST" action="/movie/add">
+    <input type="text" name="title" placeholder="Título do filme">
+    <input type="text" name="tagline" placeholder="Tagline">
+    <input type="text" name="released" placeholder="Ano do lançamento">
+    <input type="submit" value="Enviar">
+</form>
+
+<h3>(Ator)-[Conectar]->(Filme)</h3>
+<form method="POST" action="/actor-movie/connect">
+    <input type="text" name="actor" placeholder="Ator"> -[]->
+    <input type="text" name="movie" placeholder="Filme">
+    <input type="submit" value="Enviar">
+</form>
+
+<h3>Adicionar Filme</h3>
+<form method="POST" action="/movie/add">
+    <input type="text" name="title" placeholder="Título do filme">
+    <input type="text" name="tagline" placeholder="Tagline">
+    <input type="text" name="released" placeholder="Ano do lançamento">
+    <input type="submit" value="Enviar">
+</form>
+
+
+<h3>Atores</h3>
+<ul>
+    <% persons.forEach(function(person){ %>
+        <li> <%= person.name %> </li>
+    <% }) %>
+</ul>
+
+<h3>Filmes</h3>
+<ul>
+    <% movies.forEach(function(movie){ %>
+    <li> <%= movie.title %> </li>
+    <% }) %>
+</ul>
